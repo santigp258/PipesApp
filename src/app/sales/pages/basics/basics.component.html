@@ -1,1 +1,24 @@
-<p>basics works!</p>
+<div class="text-layout">
+  <h1>Basics Pipes</h1>
+  <p>Pipes included in Angular - Usually in the common Mudule</p>
+</div>
+
+<div class="p-grid">
+  <div class="p-col-4">
+    <p-card header="Uppercase" [subheader]="nameLower | uppercase">
+      {{ nameLower | uppercase }}
+    </p-card>
+  </div>
+
+  <div class="p-col-4">
+    <p-card header="Lowercase" [subheader]="nameUpper | lowercase">
+      {{ nameLower | lowercase }}
+    </p-card>
+  </div>
+
+  <div class="p-col-4">
+    <p-card header="Titlecase" [subheader]="nameComplete | titlecase">
+      {{ nameLower | titlecase }}
+    </p-card>
+  </div>
+</div>

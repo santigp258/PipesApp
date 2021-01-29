@@ -6,13 +6,14 @@ import { AppComponent } from './app.component';
 //personalizated module
 import { SharedModule } from './shared/shared.module';
 import { AppRouterModule } from './app-router.module';
+import { SalesModule } from './sales/sales.module';
 
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
-    BrowserModule,  AppRouterModule, SharedModule
+    BrowserModule,  AppRouterModule, SharedModule, SalesModule
   ],
   providers: [],
   bootstrap: [AppComponent]
