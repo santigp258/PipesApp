@@ -4,39 +4,38 @@ import { MenuItem } from 'primeng/api';
 @Component({
   selector: 'app-menu',
   templateUrl: './menu.component.html',
-  styles: [
-  ]
+  styles: [],
 })
 export class MenuComponent implements OnInit {
-
-
-  items: MenuItem[] =  [];
+  items: MenuItem[] = [];
 
   ngOnInit() {
-      this.items = [
+    this.items = [
+      {
+        label: 'Angular Pipes',
+        icon: 'pi pi-desktop',
+        items: [
           {
-              label: 'File',
-              items: [{
-                      label: 'New', 
-                      icon: 'pi pi-fw pi-plus',
-                      items: [
-                          {label: 'Project'},
-                          {label: 'Other'},
-                      ]
-                  },
-                  {label: 'Open'},
-                  {label: 'Quit'}
-              ]
+            label: 'Text and Dates',
+            icon: 'pi pi-align-left',
+            routerLink: '/'
           },
           {
-              label: 'Edit',
-              icon: 'pi pi-fw pi-pencil',
-              items: [
-                  {label: 'Delete', icon: 'pi pi-fw pi-trash'},
-                  {label: 'Refresh', icon: 'pi pi-fw pi-refresh'}
-              ]
-          }
-      ];
+            label: 'Numbers',
+            icon: 'pi pi-dollar',
+            routerLink: 'numbers'
+          },
+          {
+            label: 'Not Commons',
+            icon: 'pi pi-globe',
+            routerLink: 'not-commons'
+          },
+        ],
+      },
+      {
+          label: 'Custom Pipes',
+          icon: 'pi pi-cog',
+      }
+    ];
   }
-
 }

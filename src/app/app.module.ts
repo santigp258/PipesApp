@@ -5,13 +5,14 @@ import { AppComponent } from './app.component';
 
 //personalizated module
 import { SharedModule } from './shared/shared.module';
+import { AppRouterModule } from './app-router.module';
 
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
-    BrowserModule, SharedModule
+    BrowserModule,  AppRouterModule, SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]

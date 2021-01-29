@@ -9,6 +9,7 @@ import { OrderComponent } from './pages/order/order.component';
 
 @NgModule({
   declarations: [NumbersComponent, NotCommonsComponent, BasicsComponent, OrderComponent],
+  exports: [NumbersComponent, NotCommonsComponent, BasicsComponent, OrderComponent],
   imports: [
     CommonModule
   ]
