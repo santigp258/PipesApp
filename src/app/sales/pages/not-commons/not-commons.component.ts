@@ -3,7 +3,13 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-not-commons',
   templateUrl: './not-commons.component.html',
-  styles: [],
+  styles: [
+    `
+      button {
+        margin: 7px;
+      }
+    `,
+  ],
 })
 export class NotCommonsComponent {
   //i18nSelect
@@ -13,9 +19,27 @@ export class NotCommonsComponent {
 
   //i18nPlural
 
-  clients: string[] = ['Ana', 'Santi'];
+  clients: string[] = ['Ana', 'Santi', 'Emanuel', 'Clark'];
   clientsMapping = {
     '=0': 'no tenemos ningún cliente esperando',
-    'other' : 'tenemos # clientes esperando'
+    other: 'tenemos # clientes esperando',
+  };
+
+  changeClient() {
+    if (this.name === 'Ana') {
+      this.name = 'Santi';
+      this.gender = 'male';
+    } else {
+      this.name = 'Ana';
+      this.gender = 'female';
+    }
+  }
+
+  deleteClient() {
+    this.clients.shift();
+  }
+
+  addClient() {
+    this.clients.push('clientPrueba');
   }
 }
