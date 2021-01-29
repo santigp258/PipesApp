@@ -42,4 +42,13 @@ export class NotCommonsComponent {
   addClient() {
     this.clients.push('clientPrueba');
   }
+
+  //keyvalue Pipe
+
+  person = {
+    name: 'Santiago',
+    age: 17,
+    address: 'Obando, Valle',
+  };
+
 }
