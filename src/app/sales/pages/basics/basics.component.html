@@ -22,3 +22,52 @@
     </p-card>
   </div>
 </div>
+
+<div class="text-layout">
+  <h1>Date Pipes</h1>
+  <p>Pipe showing dates</p>
+</div>
+
+<div class="p-grid">
+  <div class="p-col-6">
+    <p-card>
+      <ul>
+        <li>date</li>
+        <li>date | date</li>
+        <li>date | date:'short'</li>
+        <li>date | date:'long'</li>
+        <li>date | date:'MMM'</li>
+        <li>date | date:'MMMM dd, YYYY'</li>
+      </ul>
+    </p-card>
+  </div>
+
+  <div class="p-col-6">
+    <p-card>
+      <ul>
+        <li>
+          {{ date }}
+        </li>
+
+        <li>
+          {{ date | date }}
+        </li>
+
+        <li>
+          {{ date | date:'short' }}
+        </li>
+
+        <li>
+          {{ date | date:'long' }}
+        </li>
+
+        <li>
+          {{ date | date:'MMM' }}
+        </li>
+        <li>
+            {{ date | date:'MMMM dd, YYYY' }}
+          </li>
+      </ul>
+    </p-card>
+  </div>
+</div>

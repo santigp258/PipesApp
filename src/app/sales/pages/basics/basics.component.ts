@@ -9,4 +9,6 @@ export class BasicsComponent {
   nameLower: string = 'santiago';
   nameUpper: string = 'SANTIAGO';
   nameComplete: string = 'Santiago';
+  
+  date: Date = new Date();
 }
