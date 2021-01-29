@@ -6,13 +6,13 @@
 <div class="p-grid">
   <div class="p-col p-md-6">
     <p-fieldset legend="i18nSelect Pipe" [toggleable]="true">
-      Hola {{ name }}, es un placer {{gender | i18nSelect:inviteMap}}
+      Hola {{ name }}, es un placer {{gender | i18nSelect:inviteMap}} a nuestro evento.
     </p-fieldset>
   </div>
 
   <div class="p-col p-md-6">
     <p-fieldset legend="i18nPlural Pipe" [toggleable]="true">
-      Content
+     Actualmente {{clients.length | i18nPlural:clientsMapping}}.
     </p-fieldset>
   </div>
 </div>
