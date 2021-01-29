@@ -3,12 +3,15 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 
+//personalizated module
+import { PrimeNgModule } from './prime-ng/prime-ng.module';
+
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule, PrimeNgModule
   ],
   providers: [],
   bootstrap: [AppComponent]
