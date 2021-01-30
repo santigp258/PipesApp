@@ -6,11 +6,12 @@ import { BasicsComponent } from './pages/basics/basics.component';
 import { OrderComponent } from './pages/order/order.component';
 import { PrimeNgModule } from '../prime-ng/prime-ng.module';
 import { UppercasePipe } from './pipes/uppercase.pipe';
+import { FlyPipe } from './pipes/fly.pipe';
 
 
 
 @NgModule({
-  declarations: [NumbersComponent, NotCommonsComponent, BasicsComponent, OrderComponent, UppercasePipe],
+  declarations: [NumbersComponent, NotCommonsComponent, BasicsComponent, OrderComponent, UppercasePipe, FlyPipe],
   exports: [NumbersComponent, NotCommonsComponent, BasicsComponent, OrderComponent],
   imports: [
     CommonModule, PrimeNgModule
