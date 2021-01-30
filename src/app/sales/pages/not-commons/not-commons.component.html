@@ -36,30 +36,34 @@
         label="Add Client"
         class="p-button-outlined p-button-primary"
         (click)="addClient()"
-      ></button>  
+      ></button>
     </p-fieldset>
   </div>
 
   <div class="p-col p-md-6">
-    <p-fieldset legend="Slice Pipe" [toggleable]="true"> 
+    <p-fieldset legend="Slice Pipe" [toggleable]="true">
       <b>Original</b>
-      <pre>{{clients}}</pre>
-      
+      <pre>{{ clients }}</pre>
+
       <b>slice:0:2</b>
-      <pre>{{clients |slice:0:2}}</pre>
+      <pre>{{ clients | slice: 0:2 }}</pre>
 
       <b>slice:1:2</b>
-      <pre>{{clients |slice:1:2}}</pre>
+      <pre>{{ clients | slice: 1:2 }}</pre>
     </p-fieldset>
   </div>
 
-  
   <div class="p-col p-md-6">
-    <p-fieldset legend="KeyValue Pipe" [toggleable]="true"> 
+    <p-fieldset legend="Json Pipe" [toggleable]="true">
+      <pre> {{ heroes | json }} </pre>
+    </p-fieldset>
+  </div>
+  <div class="p-col p-md-6">
+    <p-fieldset legend="KeyValue Pipe" [toggleable]="true">
       <ul>
-      <li *ngFor="let item of person |keyvalue">
-      <b>  {{item.key |titlecase}}</b> : {{item.value}}
-      </li>
+        <li *ngFor="let item of person | keyvalue">
+          <b> {{ item.key | titlecase }}</b> : {{ item.value }}
+        </li>
       </ul>
     </p-fieldset>
   </div>

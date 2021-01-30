@@ -51,4 +51,21 @@ export class NotCommonsComponent {
     address: 'Obando, Valle',
   };
 
+  //json Pipe
+
+  heroes = [
+    {
+      name: 'Superman',
+      fly: true
+    },
+    {
+      name: 'Aquman',
+      fly: false
+    },
+    {
+      name: 'Acuaman',
+      fly: false
+    }
+  ]
+
 }
