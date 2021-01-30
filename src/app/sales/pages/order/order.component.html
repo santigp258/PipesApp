@@ -13,13 +13,14 @@
       class="p-button-help p-mr-1"
       (click)="change()"
     ></button>
-    <button pButton icon="pi pi-sort" label="Name" class="p-mr-1"></button>
+    <button pButton icon="pi pi-sort" label="Name" class="p-mr-1" (click)="changeName('name')"></button>
 
     <button
       pButton
       icon="pi pi-sort"
       label="Fly"
       class="p-mr-1 p-button-success"
+      (click)="changeName('fly')"
     ></button>
 
     <button
@@ -27,13 +28,14 @@
       icon="pi pi-sort"
       label="Color"
       class="p-mr-1 p-button-warning"
+      (click)="changeName('color')"
     ></button>
   </div>
 </p-toolbar>
 
 <div class="p-grid">
   <div class="p-col p-mt-3">
-    <p-table [value]="heroes | order">
+    <p-table [value]="heroes | order:orderBy">
       <ng-template pTemplate="header">
         <tr>
           <th>Name</th>

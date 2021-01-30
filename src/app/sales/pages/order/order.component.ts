@@ -8,6 +8,7 @@ import { Color, Hero } from '../../interfaces/sales.interface';
 })
 export class OrderComponent {
   boolean: boolean = true;
+  orderBy: string = '';
   heroes: Hero[] = [
     {
       name: 'Superman',
@@ -38,5 +39,9 @@ export class OrderComponent {
   change() {
     // (this.boolean) ? this.boolean = false : this.boolean = true
     this.boolean = !this.boolean;
+  }
+
+  changeName(value: string){
+    this.orderBy = value;
   }
 }
