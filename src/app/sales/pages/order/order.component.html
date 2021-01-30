@@ -1,1 +1,12 @@
-<p>order works!</p>
+<div class="text-layout">
+  <h1>Custom Pipes</h1>
+  <p>Pipes created by {{ "us" | uppercasePipe:boolean }}</p>
+
+  <button
+        pButton
+        type="button"
+        label="Toggle Uppercase"
+        class="p-button-outlined p-button-help"
+        (click)="change()"
+      ></button>
+</div>

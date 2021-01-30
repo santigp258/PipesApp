@@ -5,11 +5,12 @@ import { NotCommonsComponent } from './pages/not-commons/not-commons.component';
 import { BasicsComponent } from './pages/basics/basics.component';
 import { OrderComponent } from './pages/order/order.component';
 import { PrimeNgModule } from '../prime-ng/prime-ng.module';
+import { UppercasePipe } from './pipes/uppercase.pipe';
 
 
 
 @NgModule({
-  declarations: [NumbersComponent, NotCommonsComponent, BasicsComponent, OrderComponent],
+  declarations: [NumbersComponent, NotCommonsComponent, BasicsComponent, OrderComponent, UppercasePipe],
   exports: [NumbersComponent, NotCommonsComponent, BasicsComponent, OrderComponent],
   imports: [
     CommonModule, PrimeNgModule
