@@ -4,8 +4,7 @@
 </div>
 
 <p-toolbar>
-  <div class="p-toolbar-group-left"></div>
-  <div class="p-toolbar-group-right">
+  <div class="p-toolbar-group-left">
     <button
       pButton
       type="button"
@@ -13,7 +12,15 @@
       class="p-button-help p-mr-1"
       (click)="change()"
     ></button>
-    <button pButton icon="pi pi-sort" label="Name" class="p-mr-1" (click)="changeName('name')"></button>
+  </div>
+  <div class="p-toolbar-group-right">
+    <button
+      pButton
+      icon="pi pi-sort"
+      label="Name"
+      class="p-mr-1"
+      (click)="changeName('name')"
+    ></button>
 
     <button
       pButton
@@ -35,7 +42,7 @@
 
 <div class="p-grid">
   <div class="p-col p-mt-3">
-    <p-table [value]="heroes | order:orderBy">
+    <p-table [value]="heroes | order: orderBy">
       <ng-template pTemplate="header">
         <tr>
           <th>Name</th>
@@ -54,15 +61,21 @@
   </div>
 </div>
 
-
 <div class="p-grid">
   <div class="p-col p-mt-3">
-    <p-table [value]="heroes |slice:0"> <!-- slice para no mutar -->
+    <p-table [value]="heroes | slice: 0">
+      <!-- slice para no mutar -->
       <ng-template pTemplate="header">
         <tr>
-          <th pSortableColumn="name">Name <p-sortIcon field="name"></p-sortIcon></th>
-          <th pSortableColumn="fly">Fly <p-sortIcon field="fly"></p-sortIcon></th>
-          <th pSortableColumn="color">Color <p-sortIcon field="color"></p-sortIcon></th>
+          <th pSortableColumn="name">
+            Name <p-sortIcon field="name"></p-sortIcon>
+          </th>
+          <th pSortableColumn="fly">
+            Fly <p-sortIcon field="fly"></p-sortIcon>
+          </th>
+          <th pSortableColumn="color">
+            Color <p-sortIcon field="color"></p-sortIcon>
+          </th>
         </tr>
       </ng-template>
       <ng-template pTemplate="body" let-hero>
