@@ -6,14 +6,13 @@
 <p-toolbar>
   <div class="p-toolbar-group-left"></div>
   <div class="p-toolbar-group-right">
-    
-      <button
-        pButton
-        type="button"
-        label="Toggle Uppercase"
-        class="p-button-help p-mr-1"
-        (click)="change()"
-      ></button>
+    <button
+      pButton
+      type="button"
+      label="Toggle Uppercase"
+      class="p-button-help p-mr-1"
+      (click)="change()"
+    ></button>
     <button pButton icon="pi pi-sort" label="Name" class="p-mr-1"></button>
 
     <button
@@ -34,23 +33,21 @@
 
 <div class="p-grid">
   <div class="p-col p-mt-3">
-    <p-table [value]="[]">
+    <p-table [value]="heroes">
       <ng-template pTemplate="header">
-          <tr>
-              <th>Code</th>
-              <th>Name</th>
-              <th>Category</th>
-              <th>Quantity</th>
-          </tr>
+        <tr>
+          <th>Name</th>
+          <th>Fly</th>
+          <th>Color</th>
+        </tr>
       </ng-template>
-      <ng-template pTemplate="body" let-product>
-          <tr>
-              <td>{{product.code}}</td>
-              <td>{{product.name}}</td>
-              <td>{{product.category}}</td>
-              <td>{{product.quantity}}</td>
-          </tr>
+      <ng-template pTemplate="body" let-hero>
+        <tr>
+          <td>{{ hero.name }}</td>
+          <td>{{ hero.fly }}</td>
+          <td>{{ hero.color }}</td>
+        </tr>
       </ng-template>
-  </p-table>
+    </p-table>
   </div>
 </div>

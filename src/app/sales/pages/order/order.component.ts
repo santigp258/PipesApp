@@ -1,22 +1,42 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { Color, Hero } from '../../interfaces/sales.interface';
 
 @Component({
   selector: 'app-order',
   templateUrl: './order.component.html',
-  styles: [
-  ]
+  styles: [],
 })
-export class OrderComponent implements OnInit {
-
+export class OrderComponent {
   boolean: boolean = true;
-
-  change(){
-   // (this.boolean) ? this.boolean = false : this.boolean = true
-    this.boolean = !this.boolean
+  heroes: Hero[] = [
+    {
+      name: 'Superman',
+      fly: true,
+      color: Color.blue,
+    },
+    {
+      name: 'Batman',
+      fly: true,
+      color: Color.black,
+    },
+    {
+      name: 'Robby',
+      fly: false,
+      color: Color.green,
+    },
+    {
+      name: 'DareDevil',
+      fly: false,
+      color: Color.red,
+    },
+    {
+      name: 'Green Lantern',
+      fly: true,
+      color: Color.green,
+    },
+  ];
+  change() {
+    // (this.boolean) ? this.boolean = false : this.boolean = true
+    this.boolean = !this.boolean;
   }
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
 }
